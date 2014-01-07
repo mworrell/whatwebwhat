@@ -1,0 +1,78 @@
+%% Zotonic site configuration for teity.
+[
+ %% This site is enabled or not.
+ {enabled, true},
+
+ %% Hostname on which this site runs
+ {hostname, "whatwebwhat.local:8000"},
+
+ %% Aliases which should redirect to the primary hostname
+ {hostalias, [
+      "www.whatwebwhat.com", 
+      "whatwebwhat.com",
+      "www.watwebwat.nl", 
+      "watwebwat.com",
+      "www.marcworrell.com", 
+      "marcworrell.com"
+ ]},
+
+ %% PostgreSQL database connection
+ {dbhost, "127.0.0.1"},
+ {
+   dbport, 5432
+ },
+ {dbuser, "zotonic"},
+ {dbpassword, "zotonic"},
+ {dbdatabase, "zotonic"},
+ {dbschema, "whatwebwhat"},
+
+ %% Depcache settings, maximum size in mbs
+ {depcache_memory_max, 100},
+
+ %% Password for the 'admin' user.
+ {admin_password, "admin"},
+
+ %% Title of your site
+ {title, <<"WhatWebWhat">>},
+ %% Subtitle
+ {subtitle, <<>>},
+
+ %% Page length
+ {pagelen, 10},
+
+{install_modules, 
+  [
+   mod_base,
+   mod_base_site,
+   mod_menu,
+   mod_oauth,
+   mod_search,
+   mod_oembed,
+   mod_atom_feed,
+   mod_translation,
+   mod_signal,
+   mod_logging,
+
+   mod_seo,
+   mod_seo_google,
+   mod_seo_sitemap,
+
+   mod_authentication,
+   mod_acl_adminonly,
+
+   mod_admin,
+   mod_admin_category,
+   mod_admin_config,
+   mod_admin_identity,
+   mod_admin_modules,
+   mod_admin_predicate,
+
+   mod_l10n,
+   mod_geomap,
+
+   mod_artwork,
+   mod_bootstrap,
+   mod_mailinglist,
+   mod_video_embed
+  ]}
+].
