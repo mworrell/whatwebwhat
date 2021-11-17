@@ -1,9 +1,8 @@
 .eunit
-deps
+ebin/
 *.o
 *.beam
 *.plt
 erl_crash.dump
-config
-ssl/
-files/
+priv/zotonic_site.config
+priv/files/
