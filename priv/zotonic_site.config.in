@@ -4,7 +4,7 @@
  {enabled, true},
 
  %% Hostname on which this site runs
- {hostname, "whatwebwhat.local:8000"},
+ {hostname, "whatwebwhat.test"},
 
  %% Aliases which should redirect to the primary hostname
  {hostalias, [
